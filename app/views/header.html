@@ -1,0 +1,48 @@
+
+<body ng-app="authenticationPsApp">
+
+<div class="container" ng-cloak>
+  <div ng-include ="'views/header.html"></div>
+  <div class="alert alert-{{alert.type}} animated main-alert" ng-class="{'flipInY':alert.show,'flipOutY':!alert.show,'alert-hidden':!alert.hasBeenShown}">
+    <strong>{{alert.title}}</strong> {{alert.message}}
+  </div>
+
+  <div class="footer">
+    <div class="container">
+      <p><span class="glyphicon glyphicon-heart"></span> from Golibaje Shankra </p>
+    </div>
+  </div>
+
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+  <script>
+    !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+        (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+      r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+    }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+  </script>
+
+  <!-- build:js(.) scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js({.tmp,app}) scripts/scripts.js -->
+  <script src="scripts/angular-ui-router.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/main.js"></script>
+  <script src="scripts/app.config.js"></script>
+  <script src="scripts/directives/validateEquals.js"></script>
+  <script src="scripts/controllers/register.js"></script>
+  <script src="scripts/services/alert.js"></script>
+  <script src="scripts/services/authtoken.js"></script>
+  <!-- endbuild -->
+
+</body>
+</html>
