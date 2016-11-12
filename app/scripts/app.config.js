@@ -11,6 +11,11 @@ angular.module('authenticationPsApp').config(function($urlRouterProvider,$stateP
     templateUrl:'views/register.html',
     controller:'RegisterCtrl'
   })
+  .state('login',{
+    url: '/login',
+    templateUrl:'views/login.html',
+    controller:'LoginCtrl'
+  })
   .state('jobs',{
       url: '/jobs',
       templateUrl:'views/jobs.html',
