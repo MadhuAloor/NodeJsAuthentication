@@ -8,7 +8,7 @@
  * Controller of the authenticationPsApp
  */
 angular.module('authenticationPsApp')
-  .controller('RegisterCtrl', function($scope,$rootScope,$http,alert) {
+  .controller('RegisterCtrl', function($scope,$rootScope,$http,alert,authToken) {
     $scope.submit = function(){
        var url = 'http://localhost:3000/register';
        var user = {
@@ -18,7 +18,7 @@ angular.module('authenticationPsApp')
        };
        $http.post(url,user)
          .success(function(res){
-            alert('success');
+            alert('success','Account created','Welcome,' + res.user.email +'!' );
             authToken.setToken(res.token);
          })
          .error(function(err){
