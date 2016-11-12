@@ -9,4 +9,4 @@
  * Main module of the application.
  */
 angular
-  .module('authenticationPsApp', ['ui.router']);
+  .module('authenticationPsApp', ['ui.router','ngAnimate']);
